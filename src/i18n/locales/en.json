@@ -21,25 +21,30 @@
     }
   },
   "shop": {
+    "welcome": "Welcome!",
+    "title": "Shop Profile",
     "profile": "Store Profile",
-    "name": "Store Name",
-    "description": "Description",
+    "name": "Shop Name",
+    "description": "Shop Description",
     "management": "Store Management",
     "settings": {
-      "title": "Store Settings"
+      "title": "Shop Settings"
     },
     "messages": {
-      "updateSuccess": "Store updated successfully",
+      "updateSuccess": "Shop updated successfully",
       "fetchSuccess": "Store fetched successfully"
     },
     "errors": {
-      "updateFailed": "Failed to update store",
+      "updateFailed": "Failed to update shop",
       "createFailed": "Failed to create store. Please try again or contact support.",
-      "fetchFailed": "Failed to fetch store details"
+      "fetchFailed": "Failed to fetch shop details"
     },
-    "namePlaceholder": "Enter store name",
-    "descriptionPlaceholder": "Enter store description",
-    "updateButton": "Update Store"
+    "namePlaceholder": "Enter shop name",
+    "descriptionPlaceholder": "Enter shop description",
+    "updateButton": "Update Shop",
+    "loading": "Loading...",
+    "noDescription": "No description available",
+    "viewPublicPage": "View Public Store Page"
   },
   "items": {
     "title": "Items",
@@ -56,13 +61,19 @@
     "inStock": "{count} in stock",
     "outOfStock": "Out of Stock",
     "loading": "Loading...",
+    "updateButton": "Update",
     "noDescription": "No description available",
     "noItems": "No items found",
+    "viewDetails": "View Details",
+    "enable": "Show on public store",
+    "disable": "Hide from public store",
     "messages": {
       "addSuccess": "Item added successfully",
       "updateSuccess": "Item updated successfully",
       "deleteSuccess": "Item deleted successfully",
-      "imageUploadSuccess": "Image uploaded successfully"
+      "imageUploadSuccess": "Image uploaded successfully",
+      "enableSuccess": "Item is now visible on public store",
+      "disableSuccess": "Item is now hidden from public store"
     },
     "errors": {
       "addFailed": "Failed to add item",
@@ -127,6 +138,9 @@
     "addButton": "Add Category",
     "updateButton": "Update Category",
     "noCategories": "No categories found",
+    "nameColumn": "Name",
+    "actionsColumn": "Actions",
+    "descriptionColumn": "Description",
     "messages": {
       "addSuccess": "Category added successfully",
       "updateSuccess": "Category updated successfully",
@@ -161,6 +175,8 @@
     "title": "Item Details",
     "backToShop": "Back to Store",
     "orderNow": "Order Now",
+    "description": "Item Description",
+    "noDescription": "No description available",
     "stockStatus": {
       "inStock": "{count} in stock",
       "outOfStock": "Out of Stock",
@@ -217,5 +233,43 @@
     "confirm": "Confirm",
     "confirmDelete": "Are you sure you want to delete this?",
     "tryAgainLater": "Please try again later"
+  },
+  "landing": {
+    "hero": {
+      "title": "Manage Your Store ",
+      "highlight": "Effortlessly",
+      "subtitle": "A complete solution for managing your store, inventory, and orders. Start selling online today with our easy-to-use platform."
+    },
+    "cta": {
+      "getStarted": "Get Started",
+      "login": "Sign In",
+      "dashboard": "Go to Dashboard"
+    },
+    "features": {
+      "store": {
+        "title": "Store Management",
+        "description": "Create and manage your online store with ease. Add products, set prices, and organize categories."
+      },
+      "orders": {
+        "title": "Order Tracking",
+        "description": "Track and manage customer orders in real-time. Update order status and keep your customers informed."
+      },
+      "mobile": {
+        "title": "Mobile Friendly",
+        "description": "Access your store dashboard from any device. Manage your business on the go."
+      },
+      "analytics": {
+        "title": "Business Insights",
+        "description": "Get valuable insights about your sales, inventory, and customer behavior."
+      }
+    }
+  },
+  "publicStores": {
+    "title": "Discover Stores",
+    "subtitle": "Browse and shop from our collection of unique stores",
+    "searchPlaceholder": "Search stores by name...",
+    "noDescription": "No description available",
+    "noStores": "No stores available at the moment",
+    "noSearchResults": "No stores found matching your search"
   }
 } 

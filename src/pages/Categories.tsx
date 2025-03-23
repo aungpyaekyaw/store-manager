@@ -21,6 +21,8 @@ import {
   useDisclosure,
   Collapse,
   Text,
+  Box,
+  Spinner,
 } from '@chakra-ui/react';
 import { FaTrash, FaEdit } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
@@ -38,6 +40,7 @@ export default function Categories() {
   const [description, setDescription] = useState('');
   const [editingId, setEditingId] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isPageLoading, setIsPageLoading] = useState(true);
   const { user } = useAuth();
   const navigate = useNavigate();
   const toast = useToast();
@@ -56,6 +59,7 @@ export default function Categories() {
     }
 
     const fetchData = async () => {
+      setIsPageLoading(true);
       // Fetch shop
       const { data: shopData, error: shopError } = await supabase
         .from('shops')
@@ -98,6 +102,7 @@ export default function Categories() {
           setCategories(categoriesData);
         }
       }
+      setIsPageLoading(false);
     };
 
     fetchData();
@@ -310,44 +315,54 @@ export default function Categories() {
 
           <Card>
             <CardBody overflowX="auto">
-              <Table variant="simple">
-                <Thead>
-                  <Tr>
-                    <Th>{intl.formatMessage({ id: 'categories.nameColumn' })}</Th>
-                    <Th>{intl.formatMessage({ id: 'categories.descriptionColumn' })}</Th>
-                    <Th width="120px">{intl.formatMessage({ id: 'common.actions' })}</Th>
-                  </Tr>
-                </Thead>
-                <Tbody>
-                  {categories.map((category) => (
-                    <Tr key={category.id}>
-                      <Td maxW="200px">
-                        <Text noOfLines={1}>{category.name}</Text>
-                      </Td>
-                      <Td maxW="300px">
-                        <Text noOfLines={2}>{category.description}</Text>
-                      </Td>
-                      <Td>
-                        <HStack spacing={2}>
-                          <IconButton
-                            aria-label={intl.formatMessage({ id: 'categories.editButton' })}
-                            icon={<FaEdit />}
-                            onClick={() => handleEdit(category)}
-                            size={inputSize}
-                          />
-                          <IconButton
-                            aria-label={intl.formatMessage({ id: 'categories.deleteButton' })}
-                            icon={<FaTrash />}
-                            colorScheme="red"
-                            onClick={() => handleDelete(category.id)}
-                            size={inputSize}
-                          />
-                        </HStack>
-                      </Td>
+              {isPageLoading ? (
+                <Box textAlign="center" py={10}>
+                  <Spinner size="xl" />
+                </Box>
+              ) : categories.length === 0 ? (
+                <Text textAlign="center" py={10}>
+                  {intl.formatMessage({ id: 'categories.noCategories' })}
+                </Text>
+              ) : (
+                <Table variant="simple">
+                  <Thead>
+                    <Tr>
+                      <Th>{intl.formatMessage({ id: 'categories.nameColumn' })}</Th>
+                      <Th>{intl.formatMessage({ id: 'categories.descriptionColumn' })}</Th>
+                      <Th width="120px">{intl.formatMessage({ id: 'common.actions' })}</Th>
                     </Tr>
-                  ))}
-                </Tbody>
-              </Table>
+                  </Thead>
+                  <Tbody>
+                    {categories.map((category) => (
+                      <Tr key={category.id}>
+                        <Td maxW="200px">
+                          <Text noOfLines={1}>{category.name}</Text>
+                        </Td>
+                        <Td maxW="300px">
+                          <Text noOfLines={2}>{category.description}</Text>
+                        </Td>
+                        <Td>
+                          <HStack spacing={2}>
+                            <IconButton
+                              aria-label={intl.formatMessage({ id: 'categories.editButton' })}
+                              icon={<FaEdit />}
+                              onClick={() => handleEdit(category)}
+                              size={inputSize}
+                            />
+                            <IconButton
+                              aria-label={intl.formatMessage({ id: 'categories.deleteButton' })}
+                              icon={<FaTrash />}
+                              colorScheme="red"
+                              onClick={() => handleDelete(category.id)}
+                              size={inputSize}
+                            />
+                          </HStack>
+                        </Td>
+                      </Tr>
+                    ))}
+                  </Tbody>
+                </Table>
+              )}
             </CardBody>
           </Card>
         </VStack>

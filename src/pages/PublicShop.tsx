@@ -63,6 +63,7 @@ export default function PublicShop() {
         const { data: itemsData, error: itemsError } = await supabase
           .from('items')
           .select('*')
+          .eq('is_disabled', false)
           .eq('shop_id', shopId);
 
         if (itemsError) throw itemsError;

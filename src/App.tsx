@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -8,14 +8,17 @@ import Categories from './pages/Categories';
 import ShopSettings from './pages/ShopSettings';
 import PublicShop from './pages/PublicShop';
 import PublicItemDetail from './pages/PublicItemDetail';
+import PublicStores from './pages/PublicStores';
 import Orders from './pages/Orders';
+import Landing from './pages/Landing';
 
 function App() {
   return (
     <AuthProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<Navigate to="/login" />} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/stores" element={<PublicStores />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/shop" element={<Shop />} />
