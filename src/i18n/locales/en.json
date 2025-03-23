@@ -1,0 +1,221 @@
+{
+  "app": {
+    "title": "Store Manager"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "signOut": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "dontHaveAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "messages": {
+      "signupSuccess": "Sign up successful",
+      "confirmEmail": "Please check your email for confirmation link before signing in"
+    },
+    "errors": {
+      "failedSignIn": "Failed to sign in",
+      "failedSignUp": "Failed to sign up",
+      "failedSignOut": "Failed to sign out"
+    }
+  },
+  "shop": {
+    "profile": "Store Profile",
+    "name": "Store Name",
+    "description": "Description",
+    "management": "Store Management",
+    "settings": {
+      "title": "Store Settings"
+    },
+    "messages": {
+      "updateSuccess": "Store updated successfully",
+      "fetchSuccess": "Store fetched successfully"
+    },
+    "errors": {
+      "updateFailed": "Failed to update store",
+      "createFailed": "Failed to create store. Please try again or contact support.",
+      "fetchFailed": "Failed to fetch store details"
+    },
+    "namePlaceholder": "Enter store name",
+    "descriptionPlaceholder": "Enter store description",
+    "updateButton": "Update Store"
+  },
+  "items": {
+    "title": "Items",
+    "management": "Items Management",
+    "name": "Name",
+    "description": "Description",
+    "price": "Price",
+    "count": "Stock Count",
+    "image": "Item Image",
+    "category": "Category",
+    "selectCategory": "Select category",
+    "createButton": "Create Item",
+    "addButton": "Add Item",
+    "inStock": "{count} in stock",
+    "outOfStock": "Out of Stock",
+    "loading": "Loading...",
+    "noDescription": "No description available",
+    "noItems": "No items found",
+    "messages": {
+      "addSuccess": "Item added successfully",
+      "updateSuccess": "Item updated successfully",
+      "deleteSuccess": "Item deleted successfully",
+      "imageUploadSuccess": "Image uploaded successfully"
+    },
+    "errors": {
+      "addFailed": "Failed to add item",
+      "updateFailed": "Failed to update item",
+      "deleteFailed": "Failed to delete item",
+      "fetchFailed": "Failed to fetch items",
+      "refreshFailed": "Failed to refresh items",
+      "imageUploadFailed": "Failed to upload image",
+      "invalidImageType": "Invalid image type. Please upload a valid image file.",
+      "imageTooLarge": "Image file is too large. Maximum size is 800KB."
+    },
+    "namePlaceholder": "Enter item name",
+    "descriptionPlaceholder": "Enter item description",
+    "pricePlaceholder": "Enter price",
+    "countPlaceholder": "Enter stock count",
+    "categoryPlaceholder": "Select a category",
+    "imageUpload": {
+      "dragDrop": "Drag and drop an image here, or click to select",
+      "maxSize": "Maximum file size: 800KB",
+      "allowedTypes": "Allowed types: JPG, PNG, GIF"
+    }
+  },
+  "orders": {
+    "title": "Orders",
+    "management": "Orders Management",
+    "customer": "Customer",
+    "item": "Item",
+    "quantity": "Quantity",
+    "totalPrice": "Total Price",
+    "status": "Status",
+    "action": "Action",
+    "orderDate": "Order Date",
+    "noOrders": "No orders found",
+    "filter": {
+      "all": "All Orders",
+      "pending": "Pending Orders",
+      "accept": "Accepted Orders",
+      "delivered": "Delivered Orders",
+      "cancelled": "Cancelled Orders"
+    },
+    "statuses": {
+      "pending": "Pending",
+      "accept": "Accept",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    },
+    "messages": {
+      "statusUpdated": "Order status updated successfully",
+      "fetchSuccess": "Orders fetched successfully"
+    },
+    "errors": {
+      "updateFailed": "Failed to update order status",
+      "fetchFailed": "Failed to fetch orders"
+    }
+  },
+  "categories": {
+    "title": "Categories",
+    "management": "Categories Management",
+    "name": "Name",
+    "description": "Description",
+    "createButton": "Create Category",
+    "addButton": "Add Category",
+    "updateButton": "Update Category",
+    "noCategories": "No categories found",
+    "messages": {
+      "addSuccess": "Category added successfully",
+      "updateSuccess": "Category updated successfully",
+      "deleteSuccess": "Category deleted successfully",
+      "fetchSuccess": "Categories fetched successfully"
+    },
+    "errors": {
+      "addFailed": "Failed to add category",
+      "updateFailed": "Failed to update category",
+      "deleteFailed": "Failed to delete category",
+      "fetchFailed": "Failed to fetch categories",
+      "refreshFailed": "Failed to refresh categories",
+      "saveFailed": "Failed to save category"
+    },
+    "namePlaceholder": "Enter category name",
+    "descriptionPlaceholder": "Enter category description"
+  },
+  "publicShop": {
+    "title": "{shopName}",
+    "description": "Store Description",
+    "noDescription": "No description available",
+    "viewDetails": "View Details",
+    "backToShop": "Back to Store",
+    "itemList": "Available Items",
+    "noItems": "No items available in this store",
+    "errors": {
+      "fetchFailed": "Failed to load store details",
+      "notFound": "Store not found"
+    }
+  },
+  "publicItem": {
+    "title": "Item Details",
+    "backToShop": "Back to Store",
+    "orderNow": "Order Now",
+    "stockStatus": {
+      "inStock": "{count} in stock",
+      "outOfStock": "Out of Stock",
+      "lowStock": "Only {count} left"
+    },
+    "orderForm": {
+      "title": "Place Order",
+      "customerName": "Your Name",
+      "customerPhone": "Phone Number",
+      "quantity": "Quantity",
+      "totalPrice": "Total Price: {price}",
+      "submit": "Place Order",
+      "cancel": "Cancel",
+      "namePlaceholder": "Enter your name",
+      "phonePlaceholder": "Enter your phone number",
+      "success": "Order placed successfully!",
+      "errors": {
+        "nameRequired": "Please enter your name",
+        "phoneRequired": "Please enter your phone number",
+        "invalidPhone": "Please enter a valid phone number",
+        "quantityRequired": "Please enter quantity",
+        "invalidQuantity": "Please enter a valid quantity",
+        "insufficientStock": "Not enough items in stock",
+        "orderFailed": "Failed to place order. Please try again."
+      }
+    },
+    "errors": {
+      "fetchFailed": "Failed to load item details",
+      "notFound": "Item not found"
+    }
+  },
+  "order": {
+    "quantity": "Quantity",
+    "placeOrder": "Place Order",
+    "customerName": "Your Name",
+    "customerPhone": "Phone Number",
+    "orderDetails": "Order Details",
+    "errors": {
+      "nameRequired": "Name is required",
+      "phoneRequired": "Phone number is required",
+      "invalidPhone": "Invalid phone number",
+      "quantityMin": "Quantity must be at least 1",
+      "quantityExceeded": "Quantity exceeds available stock"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "update": "Update",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "confirmDelete": "Are you sure you want to delete this?",
+    "tryAgainLater": "Please try again later"
+  }
+} 
